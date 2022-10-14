@@ -1,9 +1,6 @@
 # Lab Report 2
 ### 10/14/22
 ### Gunju Kim
-
-
-
 ## Part 1. Simplest Search Engine
 ### Server.java
 ```
@@ -109,15 +106,15 @@ class SearchEngine {
 ```
 > ###  1. Use javac to compile Server.java and SearchEngine.java and enter java SearchEngine + port number.
 > ### From the main method of the SerachEngine, the error message is given if the port number is not given. the start method of the Server class is called with the arguments of portnumber and new constructor of the Handler(), handler. In the start method, new constructor of HttpServer "server" is created with the arguments of new constructor of InetSocketAddress of port and backlog. Using this new constructor, createContext() method is called with the path and new Constructor of ServerHttpHandler(handler). Then the start() of the server is called. The message with the page link is printed.
-## ![](terminal.png)
+### ![](terminal.png)
 > ###  2. On the blank space of the page, enter 'add?s=anewstringtoadd'.At first, new ArrayList called strlist is created. The handleRequest receives the argument of url. url.getPath() returns "localhost:1024/add?s=anewstringtoadd". As this contains "/add", the string array called parameters will be created with the split strings of url.getQuery(). In parameters, s and anewstringtoadd will be saved. The index 1 of the list, anewstringtoadd, will be added to the strlist. Now, strlist contains anewstringtoadd. Then, "anewstringtoadd string is added to the list" will be shown on the screen.
-## ![](add1.png)
+### ![](add1.png)
 > ###  3. On the blank space of the page, enter 'add?s=pineapple'. The handleRequest receives the argument of url. url.getPath() returns "localhost:1024/add?s=pineapple". As this contains "/add", the string list of parameters will be created with the split strings of url.getQuery. In parameters, s and pineapple will be saved. The index 1 of the list, pineapple, will be added to the strlist. Now, strlist contains anewstringtoadd and pineapple. Then, "pineapple string is added to the list" will be shown on the screen.
-## ![](add3.png)
+### ![](add3.png)
 > ###  4. On the blank space of the page, enter 'add?s=apple'. The handleRequest receives the argument of url. url.getPath() returns "localhost:1024/add?s=apple". As this contains "/add", the string list of parameters will be created with the split strings of url.getQuery. In parameters, s and apple will be saved. The index 1 of the list, apple, will be added to the strlist. Now, strlist contains anewstringtoadd, pineapple, and apple. Then, "apple string is added to the list" will be shown on the screen
-## ![](add2.png)
+### ![](add2.png)
 > ###  4. On the blank space of the page, enter 'search?s=app' in order to search for the list of strings that contains the substring of "app". As the url.getPath contains "/search", the string array called parameters will be created with the split strings of url.getQuery(). In parameters, s and app is saved. The string variable result is created empty. String variable substr is created and the value of parameters index 1, the substring, 'app', is saved to this variable. In the for loop, each element of the strlist is checked if it contains the substring and added to the string variale result. If the result is not empty, ' and ' is added to the string before adding new element. Then, "pineapple and apple" will be shown on the screen
-## ![](query.png)
+### ![](query.png)
 
 ## Part 2. Symptoms and Failures
 ## 
@@ -136,7 +133,7 @@ class SearchEngine {
 ```
 ## Symptom
 ### For the averageWithoutLowest() in ArrayExamples.java, the output of the method for input double[] = {1, 1, 2, 3, 4} was 2.0 instead of 2.5 when I used the assertEquals(2.5, ArrayExamples.averageWithoutLowest(input2),0). 
-##### ![](failure.png)
+### ![](failure.png)
 ### 
 ## Bug
 ```
@@ -176,7 +173,7 @@ for(double num: arr) {
 ```
 ## Symptom
 ### The two tests took longer than other tests. According to the description of the failures, the append() could not be processed because the heap space of Java was out of memory.
-##### ![](failure2.png)
+### ![](failure2.png)
 ##
 ## Bug
 ```
